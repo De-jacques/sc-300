@@ -8,3 +8,4 @@ Instructions/Labs/*.md
 
 # Réinclure uniquement le fichier de ressources
 !Instructions/Labs/Lab_00_SetUpLabResources.md
+!Instructions/Labs/Lab_01_ManageUserRoles.md
