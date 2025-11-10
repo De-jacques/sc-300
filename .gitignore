@@ -1,0 +1,10 @@
+.github/
+_build.yml
+_config.yml
+index.md
+Allfiles/Demos/
+# Ignorer tous les fichiers .md dans le dossier Labs
+Instructions/Labs/*.md
+
+# Réinclure uniquement le fichier de ressources
+!Instructions/Labs/Lab_00_SetUpLabResources.md
