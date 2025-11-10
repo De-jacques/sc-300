@@ -180,65 +180,6 @@ Cette tâche utilisera une méthode alternative pour supprimer le rôle attribu�
 Après la création des utilisateurs, vous serez averti que la création a réussi.  Fermez la tuile de création en masse d'utilisateurs et les nouveaux utilisateurs seront peuplés dans la liste de **Utilisateurs | Tous les utilisateurs**. 
 
 
-1. Ouvrez PowerShell.  Cela peut être fait en recherchant PowerShell dans Windows. 
-
-**Remarque** - Vous devez avoir PowerShell version 7.2 ou supérieure pour que ce laboratoire fonctionne.  Lorsque PowerShell s'ouvre, vous obtiendrez une version en haut de l'écran. Si vous exécutez une version antérieure, suivez les instructions à l'écran pour aller sur https://aka.ms/PowerShell-Release?tag=7.3.9. Faites défiler vers le bas jusqu'à la section des actifs et sélectionnez powershell-7.3.1-win-x64.msi. Lorsque le téléchargement est terminé, sélectionnez Ouvrir le fichier. Installez en utilisant tous les paramètres par défaut.
-
-**Astuce de laboratoire** - TouchType ne fonctionne pas bien avec PowerShell dans l'environnement de laboratoire.  Pour contourner ce problème, ouvrez le Bloc-notes dans votre environnement de laboratoire. Ensuite, utilisez la fonction TouchType pour placer le script dans le Bloc-notes, puis enfin, utilisez Copier & Coller pour mettre la commande dans PowerShell.  Nous nous excusons pour cette étape supplémentaire.
-
-2. Vous devrez installer le module Microsoft.Graph PowerShell si vous ne l'avez pas encore utilisé.  Exécutez les deux commandes suivantes et lorsque vous êtes invité à confirmer, appuyez sur O :
-
-    ```
-    Install-Module Microsoft.Graph -Scope CurrentUser -Verbose
-    ```
-3. Confirmez que le module Microsoft.Graph est installé :
-
-    ```
-    Get-InstalledModule Microsoft.Graph
-    ```
-    
-
-4. Ensuite, vous devrez vous connecter à l'API Microsoft Graph en exécutant :  
-
-    ```
-    Connect-MgGraph -Scopes "User.ReadWrite.All"
-    ``` 
-    Le navigateur Edge s'ouvrira et vous serez invité à vous connecter.  Utilisez le compte d'administrateur MOD pour vous connecter.  Acceptez la demande d'autorisation, puis fermez la fenêtre du navigateur.
-
-5. Pour vérifier que vous êtes connecté et voir les utilisateurs existants, exécutez :  
-
-    ``` 
-    Get-MgUser 
-    ```
-    
-6. Pour attribuer un mot de passe temporaire commun à tous les nouveaux utilisateurs, exécutez la commande suivante en remplaçant <Entrez un mot de passe complexe> par le mot de passe que vous souhaitez fournir à vos utilisateurs.  
-
-    ``` 
-    $PWProfile = @{
-        Password = "<Entrez un mot de passe complexe que vous utiliserez>";
-        ForceChangePasswordNextSignIn = $false
-    }
-    ```
-
-7. Vous êtes prêt à créer de nouveaux utilisateurs.  La commande suivante sera remplie avec les informations de l'utilisateur et exécutée.  Si vous avez plus d'un utilisateur à ajouter, vous pouvez utiliser un fichier txt de bloc-notes pour ajouter les informations de l'utilisateur et copier/coller dans PowerShell. 
-
-    ```
-    New-MgUser `
-        -DisplayName "Nouvel utilisateur PW" `
-        -GivenName "Nouvel" -Surname "Utilisateur" `
-        -MailNickname "nouvelutilisateur" `
-        -UsageLocation "US" `
-        -UserPrincipalName "nouvelutilisateur@<nom du locataire lab>.com" `
-        -PasswordProfile $PWProfile -AccountEnabled `
-        -Department "Recherche" -JobTitle "Formateur"
-    ```
-**Remarque** - Remplacez **labtenantname.com** par le **onmicrosoft.com** nommé par le locataire de laboratoire.
-
-## Expérimenter avec la gestion des utilisateurs
-
-Vous pouvez ajouter et supprimer des utilisateurs avec la page Microsoft Entra ID.  Cependant, les utilisateurs peuvent être créés et des rôles peuvent être attribués à l'aide de scripts.  Expérimentez en donnant au compte utilisateur Franck KOUAME un rôle différent à l'aide d'un script. 
- 
-
 ### Exercice 5 - Supprimer un utilisateur de Microsoft Entra ID
 
 #### Tâche 1 - Supprimer un utilisateur
