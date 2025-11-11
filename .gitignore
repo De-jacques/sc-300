@@ -6,9 +6,10 @@ Allfiles/Demos/
 # Ignorer tous les fichiers .md dans le dossier Labs
 Instructions/Labs/*.md
 
-# Réinclure uniquement le fichier de ressources
+# Réinclure uniquement les fichiers de ressources et les laboratoires souhaités
 !Instructions/Labs/Lab_00_SetUpLabResources.md
 !Instructions/Labs/Lab_01_ManageUserRoles.md
 !Instructions/Labs/Lab_02_WorkingWithTenantProperties.md
 !Instructions/Lab_03_ConfigureAAD_MultiFactorAuthRegPolicy.md
 !Instructions/Labs/Lab_04_ConfigureConditionalAccessPolicies.md
+!Instructions/Labs/Lab_04_ImplementAndTestAConditionalAccessPolicy.md
