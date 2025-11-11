@@ -12,7 +12,5 @@ Instructions/Labs/*.md
 !Instructions/Labs/Lab_02_WorkingWithTenantProperties.md
 !Instructions/Labs/Lab_03_ConfigureAAD_MultiFactorAuthRegPolicy.md
 !Instructions/Labs/Lab_04_ConfigureConditionalAccessPolicies.md
-!Instructions/Labs/Lab_04_ImplementAndTestAConditionalAccessPolicygit rm --cached Instructions/Labs/Lab_03_ConfigureAAD_MultiFactorAuthRegPolicy.md
-git add .gitignore Instructions/Labs/Lab_03_ConfigureAAD_MultiFactorAuthRegPolicy.md
-git commit -m "Fix: afficher Lab_03 sur GitHub"
-git push.md
+!Instructions/Labs/Lab_04_ImplementAndTestAConditionalAccessPolicy.md
+!Instructions/Labs/Lab_05_AddGuestUsersToTheDirectory.md
