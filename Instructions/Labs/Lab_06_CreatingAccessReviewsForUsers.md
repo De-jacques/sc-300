@@ -1,5 +1,5 @@
 
-# Labo 25 - Créer des révisions d'accès pour les utilisateurs internes et externes
+# Labo 6 - Créer des révisions d'accès pour les utilisateurs internes et externes
 
 ### Type de connexion = Administrateur Microsoft 365
 
