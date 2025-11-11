@@ -16,3 +16,4 @@ Instructions/Labs/*.md
 !Instructions/Labs/Lab_05_AddGuestUsersToTheDirectory.md
 !Instructions/Labs/Lab_06_CreatingAccessReviewsForUsers.md
 !Instructions/Labs/Lab_07_ConfigureAndDeploySelfServicePasswordReset.md
+!Instructions/Labs/Lab_08_EnableAzureADMultiFactorAuthentication.md
