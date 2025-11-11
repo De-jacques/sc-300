@@ -15,3 +15,4 @@ Instructions/Labs/*.md
 !Instructions/Labs/Lab_04_ImplementAndTestAConditionalAccessPolicy.md
 !Instructions/Labs/Lab_05_AddGuestUsersToTheDirectory.md
 !Instructions/Labs/Lab_06_CreatingAccessReviewsForUsers.md
+!Instructions/Labs/Lab_07_ConfigureAndDeploySelfServicePasswordReset.md
